@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>ID CARD CUSTOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="./static/css/css2.css" rel="stylesheet">
+    <link href="./static/css/css3.css" rel="stylesheet">
+    <link href="./static/css/css4.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./static/css/xpi7xha.css">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Lato, sans-serif;
+            background-color: #fdfcfa;
+            overflow-x: hidden;
+        }
+
+        #background {
+            position: fixed;
+            inset: 0;
+            background: url("./images/bg.jpg") center / cover no-repeat;
+        }
+
+        #wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50vw;
+            z-index: 10;
+        }
+
+        #root {
+            position: relative;
+            width: 50vw;
+            height: 31.7vw;
+        }
+
+        #id-wrapper,
+        .id-layer {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #id-background {
+            background: url("./images/cardbg-yellow.0e6227ea.png") center / cover no-repeat;
+            z-index: 1;
+        }
+
+        #id-copy {
+            background: url("./images/copylayer.png") center / cover no-repeat;
+            z-index: 3;
+        }
+
+        /* ===== IMAGE (BIGGER) ===== */
+        .imageupload {
+            position: absolute;
+            top: 4.5vw;
+            left: 3.5vw;
+            width: 23vw;
+            height: 25vw;
+            border: 1px solid #000;
+            background: transparent;
+            font-size: 2.2vw;
+            cursor: pointer;
+            z-index: 5;
+        }
+
+        .imageuploaded {
+            position: absolute;
+            top: 5vw;
+            left: 3vw;
+            width: 24vw;
+            height: 24vw;
+            background: #fff;
+            border: 1px solid #000;
+            transform: rotate(-1deg);
+            box-shadow: 2px 2px 15px -3px #000;
+            z-index: 6;
+        }
+
+        /* ===== TEXT FIELDS ===== */
+        input {
+            position: absolute;
+            border: none;
+            outline: none;
+            background: transparent;
+            text-align: center;
+            font-size: 2.2vw;
+            font-family: 'Nanum Pen Script', cursive;
+        }
+
+        #form-control-full-name {
+            top: 6.2vw;
+            right: 4.6vw;
+            width: 18vw;
+        }
+
+        #form-control-date-of-birth {
+            top: 9vw;
+            right: 4.6vw;
+            width: 18vw;
+        }
+
+        #form-control-location {
+            top: 12vw;
+            right: 4.6vw;
+            width: 18vw;
+        }
+
+        .signature-box {
+            position: absolute;
+            top: 24.8vw;
+            right: 4.6vw;
+            font-family: 'Rock Salt', cursive;
+            font-size: 1.5vw;
+        }
+
+        .color-button,
+        .submit-button {
+            position: absolute;
+            bottom: 1.5vw;
+            width: 9vw;
+            height: 1.6vw;
+            border-radius: .5vw;
+            border: none;
+            font-size: 1vw;
+            text-transform: uppercase;
+            color: #faefcf;
+            background: #68c9d2;
+            cursor: pointer;
+        }
+
+        .color-button {
+            left: 4vw;
+        }
+
+        .submit-button {
+            left: 14.5vw;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="background"></div>
+
+<div id="wrapper">
+    <div id="root">
+        <div id="id-wrapper">
+            <div id="id-background" class="id-layer"></div>
+            <div id="id-copy" class="id-layer"></div>
+        </div>
+
+        <!-- IMAGE -->
+        <button class="imageupload">Submit Photo</button>
+
+        <!-- TEXT CONTENT (UPDATED) -->
+        <input
+            type="text"
